@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block body %}
+<section class="container">
+    <div class="row">
+        <div class="col">
+            <div class="menu">
+                <form action="get">
+                    <legend>Música</legend>
+    
+                    <label for="video" class="form-label">URL da música</label>
+                    <input type="url" name="video" id="video" placeholder="https://youtube.com/ADsd6542132" class='form-control mb-3'>
+                    <button class='btn btn-primary'>Baixar</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
