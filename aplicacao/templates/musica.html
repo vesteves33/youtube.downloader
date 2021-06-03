@@ -1,17 +1,24 @@
 {% extends "index.html" %}
 
 {% block body %}
-<section class="container">
+<section class="container mt-4">
     <div class="row">
         <div class="col">
             <div class="menu">
-                <form action="get">
+                <form action="get" class="mt-2">
+                    {{ formulario.csrf_token }}
+                   
                     <legend>Música</legend>
-    
-                    <label for="video" class="form-label">URL da música</label>
-                    <input type="url" name="video" id="video" placeholder="https://youtube.com/ADsd6542132" class='form-control mb-3'>
-                    <button class='btn btn-primary'>Baixar</button>
                     
+                    <fieldset>
+                        <div class="form-group">
+                            {{ formulario.musica.label(class='form-label') }}
+
+                            {{ formulario.musica(class='form-control mt-2', placeholder='https://youtube.com/ADsd6542132') }}
+                        </div>
+
+                    </fieldset>
+                            {{ formulario.botao (class='btn btn-md btn-primary mt-4')}}
                 </form>
             </div>
         </div>
